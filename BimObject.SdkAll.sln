@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "conf", "conf", "{2277AF5D-E
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		bimobject-192x192.png = bimobject-192x192.png
+		.github\workflows\build.yml = .github\workflows\build.yml
+		.github\dependabot.yml = .github\dependabot.yml
 		Directory.Build.Props = Directory.Build.Props
 		Directory.Build.Targets = Directory.Build.Targets
 	EndProjectSection
