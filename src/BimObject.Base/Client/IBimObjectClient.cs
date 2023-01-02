@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BimObject.Base.Client;
-internal interface ISearchApiClient
+﻿namespace BimObject.Base.Client;
+public interface IBimObjectClient
 {
+    Task Post();
 }

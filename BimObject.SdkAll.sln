@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B402E5B4-8FC1-4740-88A0-230F73E4B99D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F04B1524-1C8A-4149-A290-34EF0E1C29EC}"
+	ProjectSection(SolutionItems) = preProject
+		tests\Directory.Build.Targets = tests\Directory.Build.Targets
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{60482639-6D3B-41C6-B170-7D1C73129EDB}"
 EndProject
@@ -26,7 +29,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "conf", "conf", "{2277AF5D-E
 		.github\workflows\build.yml = .github\workflows\build.yml
 		.github\dependabot.yml = .github\dependabot.yml
 		Directory.Build.Props = Directory.Build.Props
-		Directory.Build.Targets = Directory.Build.Targets
 	EndProjectSection
 EndProject
 Global

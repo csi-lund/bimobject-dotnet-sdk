@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using BimObject.Base.Client;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace BimObject.Sdk;
 
@@ -12,14 +13,15 @@ public static class BimObjectApi
     /// </summary>
     /// <param name="serviceCollection"></param>
     /// <param name="customSettings"></param>
+    /// <param name="retryPolicies"></param>
     /// <returns></returns>
-    public static IServiceCollection UseBimObject(this IServiceCollection serviceCollection, Action<BimObjectApiSettings>? customSettings)
+    public static IServiceCollection UseBimObject(
+        this IServiceCollection serviceCollection, 
+        Action<BimObjectApiSettings, IHttpClientBuilder>? customSettings)
     {
         var settings = new BimObjectApiSettings();
-        customSettings?.Invoke(settings);
-    }
-}
+        customSettings?.Invoke(settings, serviceCollection.AddHttpClient<IBimObjectClient, BimObjectClient>());
 
-public class BimObjectApiSettings
-{ 
+        return serviceCollection;
+    }
 }
